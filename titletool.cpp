@@ -115,6 +115,12 @@ print_help(ArgParse& ap)
     ap.print_help();
 }
 
+// utils - filesystem
+std::string font_path(const std::string& font)
+{
+    return Filesystem::parent_path(Sysutil::this_program_path()) + "/fonts/" + font;
+}
+
 // main
 int 
 main( int argc, const char * argv[])
@@ -199,6 +205,9 @@ main( int argc, const char * argv[])
     int center = roi.ybegin + height / 2;
     int spacing = height * 0.02;
 
+    // font
+    std::string font = "Roboto.ttf";
+
     // background
     ImageBufAlgo::fill(
             imagebuf,
@@ -235,7 +244,7 @@ main( int argc, const char * argv[])
             titley,
             tool.title,
             titlesize,
-            "../Roboto.ttf",
+            font_path(font),
             { tool.color.x, tool.color.y, tool.color.z, 1.0f },
             ImageBufAlgo::TextAlignX::Center,
             ImageBufAlgo::TextAlignY::Top
@@ -257,7 +266,7 @@ main( int argc, const char * argv[])
             subtitley,
             tool.subtitle,
             subtitlesize,
-            "../Roboto.ttf",
+            font_path(font),
             { tool.color.x, tool.color.y, tool.color.z, 1.0f },
             ImageBufAlgo::TextAlignX::Center,
             ImageBufAlgo::TextAlignY::Top
