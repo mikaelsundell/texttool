@@ -26,7 +26,7 @@ add_executable( ${project_name} "titletool.cpp" )
 set_property( TARGET ${project_name} PROPERTY CXX_STANDARD 14)
 
 target_link_libraries( ${project_name}
-    PRIVATE:
+    PRIVATE
         Imath::Imath
         OpenImageIO::OpenImageIO
 )
