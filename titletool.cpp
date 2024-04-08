@@ -218,12 +218,10 @@ main( int argc, const char * argv[])
     // center
     int titley, subtitley;
     {
-        ROI titleroi = ImageBufAlgo::text_size(tool.title, titlesize, "../Roboto.ttf");
-        ROI subtitleroi = ImageBufAlgo::text_size(tool.title, titlesize, "../Roboto.ttf");
+        ROI titleroi = ImageBufAlgo::text_size(tool.title, titlesize, font_path(font));
+        ROI subtitleroi = ImageBufAlgo::text_size(tool.title, titlesize, font_path(font));
         int textheight = titleroi.height() + spacing + subtitleroi.height();
-        int y = center - (textheight / 2);
-
-        titley = y;
+        titley = center - (textheight / 2);
         subtitley = titley + titleroi.height() + spacing;
     }
     
@@ -235,7 +233,7 @@ main( int argc, const char * argv[])
             << ", "
             << tool.size.y
             << " ";
-        
+
         ImageBufAlgo::render_text(
             imagebuf,
             roi.xbegin + roi.width() / 2, // Center horizontally
@@ -257,7 +255,7 @@ main( int argc, const char * argv[])
             << ", "
             << tool.size.y
             << " ";
-        
+            
         ImageBufAlgo::render_text(
             imagebuf,
             roi.xbegin + roi.width() / 2, // Center horizontally
