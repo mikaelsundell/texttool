@@ -223,8 +223,6 @@ main( int argc, const char * argv[])
         int textheight = titleroi.height() + spacing + subtitleroi.height();
         int y = center - (textheight / 2);
 
-        
-        
         titley = y;
         subtitley = titley + titleroi.height() + spacing;
     }
