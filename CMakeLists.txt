@@ -12,7 +12,7 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/modules" )
 
 # imath
 find_package( Imath CONFIG REQUIRED )
-find_package( OpenColorIO CONFIG REQUIRED )
+find_package( OpenImageIO CONFIG REQUIRED )
 
 # font
 configure_file( 
