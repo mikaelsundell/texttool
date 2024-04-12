@@ -299,7 +299,6 @@ main( int argc, const char * argv[])
         hues["violet"] = 270.0f;
         hues["magenta"] = 300.0f;
         hues["rose"] = 330.0f;
-        print_info("tool.gradient: ", tool.gradient);
         std::map<std::string, float>::iterator it = hues.find(tool.gradient);
         if (it != hues.end()) {
             float hue = it->second;
