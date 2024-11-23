@@ -1,7 +1,7 @@
 Readme for titletool
 ==================
 
-[![License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](https://github.com/mikaelsundell/logctool/blob/master/README.md)
+[![License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](https://github.com/mikaelsundell/titletool/blob/master/README.md)
 
 Introduction
 ------------
@@ -18,8 +18,17 @@ The titletool app can be built both from commandline or using optional Xcode `-G
 ```shell
 mkdir build
 cd build
-cmake .. -DCMAKE_MODULE_PATH=<path>/titletool/modules -DCMAKE_PREFIX_PATH=<path> -GXcode
+cmake .. -DCMAKE_PREFIX_PATH=<path> -GXcode
 cmake --build . --config Release -j 8
+```
+
+**Example using 3rdparty on arm64 with Xcode**
+
+```shell
+mkdir build
+cd build
+cmake ..
+cmake .. -DCMAKE_PREFIX_PATH=<path>/3rdparty/build/macosx/arm64.debug -GXcode
 ```
 
 Usage
@@ -55,14 +64,12 @@ Example title image
 --size "2350,1000" 
 ```
 
-Packaging
+Download
 ---------
 
-The `macdeploy.sh` script will deploy mac bundle to dmg including dependencies.
+Titletool is included as part of pipeline tools. You can download it from the releases page:
 
-```shell
-./macdeploy.sh -e <path>/overlaytool -d <path> -p <path>
-```
+* https://github.com/mikaelsundell/pipeline/releases
 
 Dependencies
 -------------
@@ -80,13 +87,6 @@ Project
 https://github.com/mikaelsundell/overlaytool
 * Issues   
 https://github.com/mikaelsundell/overlaytool/issues
-
-
-Resources
----------
-
-* Dynamic Symmetry: The Foundation of Masterful Art   
-Author: Tavis Leaf Glover
 
 Copyright
 ---------
