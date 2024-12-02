@@ -1,9 +1,9 @@
 # Copyright 2023-present Contributors to the overlaytool project.
 # SPDX-License-Identifier: BSD-3-Clause
-# https://github.com/mikaelsundell/titletool
+# https://github.com/mikaelsundell/texttool
 
 cmake_minimum_required (VERSION 3.23)
-set (project_name "titletool" )
+set (project_name "texttool" )
 
 project ("${project_name} project" )
 
@@ -22,7 +22,7 @@ configure_file (
 )
 
 # package
-add_executable (${project_name} "titletool.cpp")
+add_executable (${project_name} "texttool.cpp")
 
 
 target_link_libraries (${project_name}

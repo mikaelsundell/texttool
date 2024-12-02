@@ -1,19 +1,19 @@
-Readme for titletool
+Readme for texttool
 ==================
 
-[![License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](https://github.com/mikaelsundell/titletool/blob/master/README.md)
+[![License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](https://github.com/mikaelsundell/texttool/blob/master/README.md)
 
 Introduction
 ------------
 
-titletool is a utility for creating title images.
+texttool is a utility for creating title images.
 
 ![Sample image or figure.](images/image.png 'it8tool')
 
 Building
 --------
 
-The titletool app can be built both from commandline or using optional Xcode `-GXcode`.
+The texttool app can be built both from commandline or using optional Xcode `-GXcode`.
 
 ```shell
 mkdir build
@@ -34,10 +34,10 @@ cmake .. -DCMAKE_PREFIX_PATH=<path>/3rdparty/build/macosx/arm64.debug -GXcode
 Usage
 -----
 
-Print titletool help message with flag ```--help```.
+Print texttool help message with flag ```--help```.
 
 ```shell
-titletool -- a utility for creating titletool images
+texttool -- a utility for creating text in images
 
 Usage: overlaytool [options] ...
 
@@ -57,7 +57,7 @@ Example title image
 --------
 
 ```shell
-./titletool
+./texttool
 --title "Hello, world!"
 --subtitle "An image about Hello, world!"
 --outputfile title.png 
@@ -67,7 +67,7 @@ Example title image
 Download
 ---------
 
-Titletool is included as part of pipeline tools. You can download it from the releases page:
+Texttool is included as part of pipeline tools. You can download it from the releases page:
 
 * https://github.com/mikaelsundell/pipeline/releases
 

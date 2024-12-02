@@ -59,8 +59,8 @@ print_error(std::string param) {
     print_error<std::string>(param);
 }
 
-// title tool
-struct TitleTool
+// text tool
+struct TextTool
 {
     bool help = false;
     bool verbose = false;
@@ -75,7 +75,7 @@ struct TitleTool
     int code = EXIT_SUCCESS;
 };
 
-static TitleTool tool;
+static TextTool tool;
 
 // --title
 static int
@@ -202,8 +202,8 @@ main( int argc, const char * argv[])
     Filesystem::convert_native_arguments(argc, (const char**)argv);
     ArgParse ap;
 
-    ap.intro("titletool -- a utility for creating title images\n");
-    ap.usage("titletool [options] ...")
+    ap.intro("texttool -- a utility for creating text in images\n");
+    ap.usage("texttool [options] ...")
       .add_help(false)
       .exit_on_error(true);
     
@@ -260,12 +260,12 @@ main( int argc, const char * argv[])
     }
     if (argc <= 1) {
         ap.briefusage();
-        print_error("\nFor detailed help: titletool --help\n");
+        print_error("\nFor detailed help: texttool --help\n");
         return EXIT_FAILURE;
     }
 
-    // titletool program
-    print_info("titletool -- a utility for creating title images");
+    // texttool program
+    print_info("texttool -- a utility for creating text in images");
 
     print_info("Writing title file: ", tool.outputfile);
     ImageSpec spec(tool.size.x, tool.size.y, 4, TypeDesc::FLOAT);
