@@ -6,7 +6,7 @@ Texttool
 Introduction
 ------------
 
-texttool is a utility for creating title images.
+Texttool is a utility for creating text in images.
 
 ![Sample image or figure.](images/image.png 'it8tool')
 
